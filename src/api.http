@@ -1,0 +1,45 @@
+@url=http://localhost:3000
+
+### retrieve favorites
+GET {{url}}/favorites
+
+### retrieve favorites asc
+GET {{url}}/favorites?sort=asc
+
+### retrieve favorites desc
+GET {{url}}/favorites?sort
+
+### create favorite
+# @name createFavorite
+POST {{url}}/favorites
+Content-Type: application/json
+
+{
+    "name": "new",
+    "url": "https://google.com"
+}
+
+### retrieve favorite
+@id = {{createFavorite.response.body.$.id}}
+GET {{url}}/favorites/{{id}}
+
+### replace favorite
+PUT {{url}}/favorites/{{id}}
+Content-Type: application/json
+
+{
+    "name": "new new",
+    "url": "https://yahoo.com"
+}
+
+### update favorite
+PATCH {{url}}/favorites/{{id}}
+Content-Type: application/json
+
+{
+    "name": "new new new"
+}
+
+### delete favorite
+
+DELETE {{url}}/favorites/{{id}}
