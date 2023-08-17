@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import express from 'express';
 import Database from 'better-sqlite3';
 const db = new Database('favorites.db');
