@@ -1,14 +1,10 @@
 import express, { Request, Response } from 'express';
 import Database, { RunResult } from 'better-sqlite3';
+import { Favorite } from '@calebcurry/shared-types';
+
 const db = new Database('favorites.db');
 
 const router = express.Router();
-
-interface Favorite {
-    id?: number;
-    name: string;
-    url: string;
-}
 
 router.get(
     '/',

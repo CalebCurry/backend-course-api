@@ -19,6 +19,7 @@
         "express": "^4.18.2"
     },
     "devDependencies": {
+        "@calebcurry/shared-types": "^1.1.0",
         "@types/better-sqlite3": "^7.6.4",
         "@types/cors": "^2.8.13",
         "@types/express": "^4.17.17",
